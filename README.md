@@ -3,6 +3,13 @@
 Site example using [Thanks For all The Fish Micro web Framework](https://github.com/delete/thanksforallthefish).
 
 
+![Home page](screenshots/home.png "Home page")
+
+
+# Runing using Docker
+
+`./manager.sh -r `
+
 ## Directories
 
 ```sh
