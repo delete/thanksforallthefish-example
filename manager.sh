@@ -36,6 +36,9 @@ build_images(){
 	docker build -t alpine-php:3.3 . && cd /tests && docker build -t alpine-phpunit:3.3 .
 }
 
+update_tfatf(){
+	curl -sSL https://raw.githubusercontent.com/delete/thanksforallthefish/master/install.sh | sh
+}
 
 case "$COMMAND" in
 	-t) run_test; ;;
@@ -43,5 +46,10 @@ case "$COMMAND" in
 	-b) build_images; ;;
 	-c) del_stopped tfatf; ;;
 
-	*) echo $'Usage: \n\t' "$0" $'-t  to run all tests \n\t' "$0" $'-r  to run the local server \n\t' "$0" $'-b  to buld Docker images \n\t' "$0" $'-c  to clean containers' ;;
+	*) echo $'Usage: \n\t' "$0" \
+		$'-t  to run all tests \n\t' "$0" \
+		$'-r  to run the local server \n\t' "$0" \
+		$'-b  to build Docker images \n\t' "$0" \
+		$'-u  to update tfatf framework \n\t' "$0" \
+		$'-c  to clean containers' ;;
 esac
