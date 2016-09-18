@@ -5,6 +5,11 @@ Site example using [Thanks For all The Fish Micro web Framework](https://github.
 
 ![Home page](screenshots/home.png "Home page")
 
+# Installing/Updating the framework
+
+If there is a instalation, the script will just update the framework.
+
+`./manager.sh -u `
 
 # Runing using Docker
 
