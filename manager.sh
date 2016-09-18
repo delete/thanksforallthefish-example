@@ -45,6 +45,7 @@ case "$COMMAND" in
 	-r) run_server; ;;
 	-b) build_images; ;;
 	-c) del_stopped tfatf; ;;
+	-u) update_tfatf tfatf; ;;
 
 	*) echo $'Usage: \n\t' "$0" \
 		$'-t  to run all tests \n\t' "$0" \
