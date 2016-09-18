@@ -6,7 +6,7 @@ class FakeView
 {
     public function load($template, Array $context)
     {   
-        echo file_get_contents($template . '.html');
+        echo file_get_contents($template);
     }
 
     public function clearAllAssign()

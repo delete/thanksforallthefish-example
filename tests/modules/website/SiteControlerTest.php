@@ -30,4 +30,17 @@ class SiteControllerTest extends PHPUnit_Framework_TestCase
 
         $this->assertContains("fellipe", $vars);
     }
+
+    public function testIndexRenderOutput($value='')
+    {
+        ob_start();
+        
+        $this->site->index("fellipe");
+        
+        $buffer = ob_get_contents();
+
+        $this->assertContains('<h1>Hello, {$value}!</h1>', $buffer);
+
+        ob_end_clean();
+    }
 }
