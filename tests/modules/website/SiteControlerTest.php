@@ -43,4 +43,13 @@ class SiteControllerTest extends PHPUnit_Framework_TestCase
 
         ob_end_clean();
     }
+
+    public function testIfHasControllers()
+    {
+        $controllers = ['index'];
+
+        foreach ($controllers as $controller) {
+            $this->assertTrue( method_exists($this->site, $controller) );
+        }
+    }
 }
