@@ -52,4 +52,10 @@ class SiteControllerTest extends PHPUnit_Framework_TestCase
             $this->assertTrue( method_exists($this->site, $controller) );
         }
     }
+
+    public function testIfTemplateDirExists()
+    {
+        $template = '/website/templates/';
+        $this->assertContains($template, $this->site->view->getTemplateDir('website'));
+    }
 }
